@@ -6,6 +6,7 @@ import pandas as pd
 st.title('Titanic app')
 st.header('Titanic Graphs - App ')
 st.write('Gráficas del dataset titanic')
+st.write('Miguel Octavio Águila Rodríguez A01706165')
 
 #se imprime el archivo en la página web
 titanic_link = 'titanic.csv'
