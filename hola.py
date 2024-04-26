@@ -1,7 +1,7 @@
 #Para crear página web
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as ptl
+import matplotlib.pyplot as plt
 
 #creamos el titulo de la app
 st.title('Titanic app')
