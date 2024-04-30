@@ -2,6 +2,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 
 #creamos el titulo de la app
 st.title('Titanic app')
@@ -45,3 +46,20 @@ ax4 = titanic_data.boxplot(['Age'])
 ax4.set_ylabel('Edad')
 st.header('Gráfica de cajas por edad')
 st.pyplot(fig4)
+
+#Gráfica de pastel
+fig5, ax5 = plt.subplots()
+hist_class = np.histogram(titanic_data['Pclass'], bins = 3, range = (1, 3))[0]
+
+labels = ['Clase 1', 'Clase 2', 'Clase 3']
+colors = ['tab:blue', 'tab:red', 'tab:green']
+explode = [0, 0, 0.2]
+ax5.pie(hist_class, 
+        labels = labels, 
+        colors = colors, 
+        autopct = '%.0f%%', 
+        explode = explode, 
+        shadow = True)
+st.header('Gráfica de pastel - Clase social')
+st.pyplot(fig5)
+st.dataframe(hist_class)
