@@ -23,7 +23,7 @@ st.pyplot(fig)
 fig2, ax2 = plt.subplots()
 y_pos = titanic_data['Pclass']
 x_pos = titanic_data['Fare']
-ax2.barth(y_pos, x_pos)
+ax2.barh(y_pos, x_pos)
 ax2.set_ylabel('Class')
 ax2.set_xlabel('Fare')
 ax2.set_title('¿Cuánto pagaron las clases del Titanic?')
