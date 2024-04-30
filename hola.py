@@ -62,4 +62,4 @@ ax5.pie(hist_class,
         shadow = True)
 st.header('Gráfica de pastel - Clase social')
 st.pyplot(fig5)
-st.dataframe(hist_class)
+st.dataframe(hist_class) #se ven los valores de los datos
