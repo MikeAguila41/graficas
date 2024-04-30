@@ -20,6 +20,7 @@ ax.hist(titanic_data['Fare'])
 st.header('Histograma del Titanic')
 st.pyplot(fig)
 
+#Gráfica de barras
 fig2, ax2 = plt.subplots()
 y_pos = titanic_data['Pclass']
 x_pos = titanic_data['Fare']
@@ -30,9 +31,17 @@ ax2.set_title('¿Cuánto pagaron las clases del Titanic?')
 st.header('Gráfica de barras del titanic')
 st.pyplot(fig2)
 
+#Gráfica de dispersión
 fig3, ax3 = plt.subplots()
 ax3.scatter(titanic_data['Age'], titanic_data['Fare'])
 ax3.set_ylabel('Tarifa')
 ax3.set_xlabel('Edad')
 st.header('Gráfica de dispersión del titanic')
 st.pyplot(fig3)
+
+#Gráfica de cajas
+fig4, ax4 = plt.subplots()
+ax4 = titanic_data.boxplot(['Age'])
+ax4.set_ylabel('Edad')
+st.header('Gráfica de cajas por edad')
+st.pyplot(fig4)
